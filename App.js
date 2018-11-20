@@ -1,6 +1,8 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { View } from 'react-native';
 import { styles } from './stylesheet'
+
+import Coctail from './components/Coctail'
 
 class App extends React.Component {
 
@@ -30,12 +32,7 @@ class App extends React.Component {
     return (
       <View style={styles.container}>
         {isLoading ? <Text>Awaiting for response</Text> : coctail.map((item, index) => {
-          return <View key={index}>
-            <Text style={styles.title}>{item.strDrink}</Text>
-            <Text>{item.strCategory}</Text>
-            <Image style={{width: 100, height: 100}} source={{uri: item.strDrinkThumb}}/>
-            <Text>{item.strInstructions}</Text>
-          </View>
+            return <Coctail key={index} data={coctail}/>
         })}
       </View>
     );
