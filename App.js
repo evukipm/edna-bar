@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { styles } from './stylesheet'
 
 import Coctail from './components/Coctail'
@@ -32,7 +32,7 @@ class App extends React.Component {
     return (
       <View style={styles.container}>
         {isLoading ? <Text>Awaiting for response</Text> : coctail.map((item, index) => {
-            return <Coctail key={index} data={coctail}/>
+            return <Coctail key={index} data={item}/>
         })}
       </View>
     );

@@ -11,7 +11,7 @@ class Coctail extends Component {
             <Text>{strCategory}</Text>
             <Image style={{width: 100, height: 100}} source={{uri: strDrinkThumb}}/>
             <Text>{strInstructions}</Text>
-          </View>
+        </View>
     )
   }
 }
